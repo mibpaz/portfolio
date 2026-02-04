@@ -60,7 +60,7 @@ export const siteConfig = {
     },
   ],
   links: {
-    github: "https://github.com/Ashlc",
-    linkedin: "https://www.linkedin.com/in/ashley-clark-0000000000/",
+    github: "https://github.com/mibppaz",
+    linkedin: "https://www.linkedin.com/in/isadorabpaz/",
   },
 };
