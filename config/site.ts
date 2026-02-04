@@ -1,3 +1,5 @@
+import { IconBrandGithub, IconBrandInstagram, IconBrandLinkedin } from "@tabler/icons-react";
+
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
@@ -21,46 +23,48 @@ export const siteConfig = {
       anchor: "about",
     },
     {
-      label: "Contact",
-      anchor: "contact",
+      label: "Socials",
+      anchor: "socials",
     },
   ],
   navMenuItems: [
     {
-      label: "Profile",
-      anchor: "profile",
-    },
-    {
-      label: "Dashboard",
-      anchor: "dashboard",
+      label: "Skills",
+      anchor: "skills",
     },
     {
       label: "Projects",
       anchor: "projects",
     },
     {
-      label: "Team",
-      anchor: "team",
+      label: "About",
+      anchor: "about",
     },
     {
-      label: "Calendar",
-      anchor: "calendar",
+      label: "Socials",
+      anchor: "socials",
+    },
+  ],
+  social: [
+    {
+      name: "GitHub",
+      icon: IconBrandGithub,
+      url: "https://github.com/mibppaz",
     },
     {
-      label: "Settings",
-      anchor: "settings",
+      name: "LinkedIn",
+      icon: IconBrandLinkedin,
+      url: "https://www.linkedin.com/in/isadorabpaz/",
     },
     {
-      label: "Help & Feedback",
-      anchor: "help-feedback",
-    },
-    {
-      label: "Logout",
-      anchor: "logout",
+      name: "Instagram",
+      icon: IconBrandInstagram,
+      url: "https://www.instagram.com/020314.mp3/",
     },
   ],
   links: {
-    github: "https://github.com/mibppaz",
+    github: "https://github.com/mibpaz",
     linkedin: "https://www.linkedin.com/in/isadorabpaz/",
   },
+  url: "https://ashlc.vercel.app/",
 };
