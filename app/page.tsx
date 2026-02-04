@@ -9,10 +9,10 @@ export default function Home() {
   return (
     <section className="flex flex-col items-center justify-center gap-8 md:py-10 w-full">
       <HeroSection />
-      <div className="flex flex-col items-center justify-center gap-4 w-full">
+      <div className="flex flex-col items-center justify-center gap-32 w-full">
         <Skills />
-        <About />
         <Projects />
+        <About />
         <Social />
       </div>
     </section>

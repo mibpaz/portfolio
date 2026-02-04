@@ -1,4 +1,4 @@
-import { staggerChildrenVariants } from '@/config/motion'
+import { staggerChildrenVariants } from '@/utils/motion'
 import { motion } from 'framer-motion'
 import React from 'react'
 
@@ -10,7 +10,7 @@ export const SkillsGrid = ({ children }: { children: React.ReactNode }) => {
       variants={staggerChildrenVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.15 }}
+      viewport={{ once: true, amount: 0.7 }}
     >
       {children}
     </motion.div>

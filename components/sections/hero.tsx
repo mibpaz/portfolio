@@ -17,10 +17,10 @@ export const Hero = () => {
         <DocsIllustration className="w-1/4" />
         <div className="flex flex-col gap-2" style={{ width: `${welcomeWidth === 0 ? "100%" : `${welcomeWidth + 2}px`}` }}>
           <h1 ref={welcomeRef} className="text-[4.5rem] w-fit font-bold">
-            Welcome to my website
+            Welcome to my portfolio
           </h1>
           <p className="text-lg text-primary-500 text-justify w-full">
-            I'm a software engineer with a passion for building web applications.
+            I'm a software engineer with a passion for building web applications and mobile apps.
           </p>
         </div>
       </div>

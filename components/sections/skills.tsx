@@ -2,8 +2,8 @@
 
 import { Container } from "@/components/misc/container";
 import { SectionTitle } from "@/components/misc/section-title";
-import { childVariants } from "@/config/motion";
 import { skills } from "@/config/skills";
+import { childVariants } from "@/utils/motion";
 import { IconSwords } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import ProfileIllustration from "../illustrations/profile";

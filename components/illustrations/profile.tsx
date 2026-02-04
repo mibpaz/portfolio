@@ -1,5 +1,5 @@
 'use client'
-import { childVariants, staggerChildrenVariants } from '@/config/motion'
+import { childVariants, staggerChildrenVariants } from '@/utils/motion'
 import { motion } from 'framer-motion'
 export const ProfileIllustration = ({ className }: { className: string }) => {
   return (

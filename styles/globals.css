@@ -34,7 +34,7 @@
     --color-surface-700: #1a6b67;
     --color-surface-800: #195653;
     --color-surface-900: #042222;
-    --color-surface-950: #030f0f;
+    --color-surface-950: #021A1A;
 
     --color-primary: #02DF82;
 
@@ -129,4 +129,8 @@
         -webkit-box-shadow: 0px 4px 16px 0px var(--color-primary-900);
         box-shadow: 0px 4px 16px 0px var(--color-primary-900);
     }
+}
+
+.bg-content1 {
+    background-color: var(--color-surface-950);
 }
