@@ -7,9 +7,9 @@ import DocsIllustration from "../illustrations/docs";
 
 export const Hero = () => {
   return (
-    <div className="flex flex-col w-full gap-12 lg:gap-8 min-h-screen">
+    <div className="flex flex-col w-full gap-12 lg:gap-8 min-h-screen sm:pt-16">
       <div className="flex flex-col lg:flex-row items-center lg:justify-between w-full">
-        <DocsIllustration className="w-2/3 sm:w-1/2 lg:w-1/4" />
+        <DocsIllustration className="w-2/3 sm:w-1/2 lg:w-1/3" />
         <div className="flex flex-col gap-2 w-full lg:max-w-[600px]">
           <h1 className="text-3xl sm:text-4xl text-center lg:text-left lg:text-[4.5rem] font-bold">
             Welcome to my portfolio
