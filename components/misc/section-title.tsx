@@ -13,8 +13,8 @@ export const SectionTitle = ({ title, description, icon: Icon }: Props) => {
         <Icon size={28} stroke={1.5} color="var(--color-primary)" />
       </div>
       <div>
-        <h1 className="text-3xl font-bold">{title}</h1>
-        <p className="text-primary-500">{description}</p>
+        <h1 className="text-2xl sm:text-3xl font-bold">{title}</h1>
+        <p className="text-primary-500 text-sm sm:text-base">{description}</p>
       </div>
     </div>
   )

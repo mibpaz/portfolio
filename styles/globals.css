@@ -46,6 +46,10 @@
     --shadow-base: 0px 4px 16px 0px var(--color-primary-900);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     font-family: var(--font-sans);
     font-size: 16px;
@@ -73,42 +77,30 @@
     }
 
     h1 {
-        font-size: 2.5rem;
+        font-size: clamp(1.75rem, 4vw, 2.5rem);
         line-height: 1.2;
         font-weight: 700;
         letter-spacing: -0.025em;
-        margin-bottom: 1rem;
-        margin-top: 0;
-        padding-top: 0;
-        padding-bottom: 0;
-        margin-bottom: 0;
-        padding-bottom: 0;
+        margin: 0;
+        padding: 0;
     }
 
     h2 {
-        font-size: 2rem;
+        font-size: clamp(1.5rem, 3.5vw, 2rem);
         line-height: 1.2;
         font-weight: 600;
         letter-spacing: -0.025em;
-        margin-bottom: 1rem;
-        margin-top: 0;
-        padding-top: 0;
-        padding-bottom: 0;
-        margin-bottom: 0;
-        padding-bottom: 0;
+        margin: 0;
+        padding: 0;
     }
 
     h3 {
-        font-size: 1.5rem;
+        font-size: clamp(1.25rem, 3vw, 1.5rem);
         line-height: 1.2;
         font-weight: 500;
         letter-spacing: -0.025em;
-        margin-bottom: 1rem;
-        margin-top: 0;
-        padding-top: 0;
-        padding-bottom: 0;
-        margin-bottom: 0;
-        padding-bottom: 0;
+        margin: 0;
+        padding: 0;
     }
 
     p {

@@ -28,7 +28,7 @@ export const Social = () => {
   return (
     <section id="socials" className="flex flex-col gap-24 w-full">
       <SectionTitle title="Social" description="Let's connect" icon={IconNetwork} />
-      <div className="flex flex-row items-center justify-center gap-6">
+      <div className="flex flex-row flex-wrap items-center justify-center gap-3 sm:gap-6">
         {socials.map((social) => (
           <Link
             key={social.name}

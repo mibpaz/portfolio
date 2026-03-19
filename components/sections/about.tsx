@@ -9,10 +9,10 @@ import { SectionTitle } from "../misc/section-title";
 
 export const About = () => {
   return (
-    <section id="skills" className="flex flex-col gap-12 w-full">
+    <section id="about" className="flex flex-col gap-12 w-full">
       <SectionTitle title="About" description="If you're interested in my story, here it is" icon={IconUser} />
-      <div className="flex w-full items-center justify-between gap-24">
-        <StoryIllustration className="w-1/2" />
+      <div className="flex flex-col lg:flex-row w-full items-start justify-between gap-8 lg:gap-24">
+        <StoryIllustration className="hidden lg:block w-1/3 shrink-0 sticky top-8 self-start" />
         <motion.div variants={staggerChildrenVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.5 }} className="flex flex-col gap-8">
           <motion.div variants={childVariants}>
             <Container title="Current status">

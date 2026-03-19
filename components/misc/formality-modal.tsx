@@ -2,7 +2,13 @@
 
 import { siteConfig } from "@/config/site";
 import { Button } from "@heroui/button";
-import { Modal, ModalBody, ModalContent, ModalFooter, ModalHeader } from "@heroui/modal";
+import {
+  Modal,
+  ModalBody,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+} from "@heroui/modal";
 import { Slider } from "@heroui/slider";
 import { IconCheck, IconCopy, IconTrendingUp } from "@tabler/icons-react";
 import { useEffect, useState } from "react";
@@ -36,7 +42,16 @@ const formalityTexts = [
     level: 5,
     label: "Borderline posh",
     emoji: "🎩",
-    text: `Greetings! I hope this message finds you well. I encountered this intricate portfolio and felt compelled to share it with you, as I believe the craftsmanship may be a particularly great fit for your tastes: ${siteConfig.url}`,
+    text: `Greetings! I hope this message finds you well.\nI encountered this intricate portfolio and felt compelled to share it with you, as I believe the craftsmanship may be a particularly great fit for your tastes: ${siteConfig.url}`,
+  },
+  {
+    level: 6,
+    label: "Shakespearean",
+    emoji: "🎭",
+    text: `Hark! Most esteemed recipient, I do humbly beseech that this missive doth find thee in the very zenith of health and spirits most resplendent.\n
+Whilst traversing the vast and labyrinthine corridors of the modern aether, mine eyes did alight upon a most exquisite and cunningly wrought portfolio, whose elegance and ingenuity did forthwith compel me to bring it unto thy noble attention. Verily, I am persuaded—nay, convinced beyond reasonable doubt—that such masterful craftsmanship may align most harmoniously with the refined inclinations of thy distinguished taste.\n
+Should it please thee, pray cast thine discerning gaze upon the following:\n
+ ${siteConfig.url}`,
   },
 ];
 
@@ -45,11 +60,15 @@ interface FormalityModalProps {
   onOpenChange: (isOpen: boolean) => void;
 }
 
-export const FormalityModal = ({ isOpen, onOpenChange }: FormalityModalProps) => {
+export const FormalityModal = ({
+  isOpen,
+  onOpenChange,
+}: FormalityModalProps) => {
   const [formalityLevel, setFormalityLevel] = useState(3);
   const [copied, setCopied] = useState(false);
 
-  const currentText = formalityTexts.find((t) => t.level === formalityLevel) ?? formalityTexts[2];
+  const currentText =
+    formalityTexts.find((t) => t.level === formalityLevel) ?? formalityTexts[2];
 
   const handleCopy = () => {
     navigator.clipboard.writeText(currentText.text);
@@ -67,17 +86,25 @@ export const FormalityModal = ({ isOpen, onOpenChange }: FormalityModalProps) =>
   }, [copied]);
 
   return (
-    <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="lg" classNames={{
-      base: "bg-surface-950 border border-primary",
-      header: "border-b border-primary",
-      footer: "border-t border-primary",
-    }}>
+    <Modal
+      isOpen={isOpen}
+      onOpenChange={onOpenChange}
+      size="lg"
+      classNames={{
+        base: "bg-surface-950 border border-primary",
+        header: "border-b border-primary",
+        footer: "border-t border-primary",
+      }}
+    >
       <ModalContent>
         {(onClose) => (
           <>
             <ModalHeader className="flex flex-col gap-1">
               <h3>Share this portfolio</h3>
-              <p className="text-sm text-border">Adjust the formality level and copy the text to share this portfolio with others.</p>
+              <p className="text-sm text-border">
+                Adjust the formality level and copy the text to share this
+                portfolio with others.
+              </p>
             </ModalHeader>
             <ModalBody className="py-6">
               <div className="flex flex-col gap-6">
@@ -85,7 +112,7 @@ export const FormalityModal = ({ isOpen, onOpenChange }: FormalityModalProps) =>
                   label="How formal do you want to be?"
                   step={1}
                   minValue={1}
-                  maxValue={5}
+                  maxValue={6}
                   value={formalityLevel}
                   onChange={(value) => setFormalityLevel(value as number)}
                   showSteps
@@ -99,11 +126,21 @@ export const FormalityModal = ({ isOpen, onOpenChange }: FormalityModalProps) =>
                   }}
                 />
                 <div className="flex flex-row items-center gap-2">
-                  <IconTrendingUp size={16} strokeWidth={1.5} className="text-primary-500" />
-                  <p className="text-sm text-border">Formality level: <span className="text-foreground">{formalityTexts[formalityLevel - 1].label} {formalityTexts[formalityLevel - 1].emoji}</span></p>
+                  <IconTrendingUp
+                    size={16}
+                    strokeWidth={1.5}
+                    className="text-primary-500"
+                  />
+                  <p className="text-sm text-border">
+                    Formality level:{" "}
+                    <span className="text-foreground">
+                      {formalityTexts[formalityLevel - 1].label}{" "}
+                      {formalityTexts[formalityLevel - 1].emoji}
+                    </span>
+                  </p>
                 </div>
                 <div className="rounded-lg border border-primary bg-surface-900 p-4 min-h-[120px]">
-                  <p className="text-sm leading-relaxed">{currentText.text}</p>
+                  <p className="text-sm leading-relaxed whitespace-pre-line">{currentText.text}</p>
                 </div>
               </div>
             </ModalBody>
@@ -115,7 +152,22 @@ export const FormalityModal = ({ isOpen, onOpenChange }: FormalityModalProps) =>
                 color="primary"
                 className="text-background font-semibold"
                 onPress={handleCopy}
-                startContent={copied ? <IconCheck size={16} strokeWidth={1.5} color="currentColor" /> : <IconCopy size={16} strokeWidth={1.5} color="currentColor" />}>
+                startContent={
+                  copied ? (
+                    <IconCheck
+                      size={16}
+                      strokeWidth={1.5}
+                      color="currentColor"
+                    />
+                  ) : (
+                    <IconCopy
+                      size={16}
+                      strokeWidth={1.5}
+                      color="currentColor"
+                    />
+                  )
+                }
+              >
                 {copied ? "Copied!" : "Copy to Clipboard"}
               </Button>
             </ModalFooter>

@@ -13,7 +13,7 @@ const ProjectCarousel = () => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.5 }}
-      className="flex flex-row items-center justify-between gap-6">
+      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       {works.map((work) => (
         <motion.div key={work.id} variants={childVariants} className="w-full">
           <Card className="w-full" shadow="lg" style={{ boxShadow: "0px 4px 16px 0px var(--color-primary-900)" }} classNames={{

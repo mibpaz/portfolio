@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center gap-8 md:py-10 w-full pb-24">
       <HeroSection />
-      <div className="flex flex-col items-center justify-center gap-32 w-full">
+      <div className="flex flex-col items-center justify-center gap-16 md:gap-32 w-full">
         <Skills />
         <Projects />
         <About />

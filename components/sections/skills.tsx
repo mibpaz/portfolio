@@ -13,8 +13,8 @@ export const Skills = () => {
   return (
     <section id="skills" className="flex flex-col gap-12 w-full">
       <SectionTitle title="Skillset" description="What we're fighting with" icon={IconSwords} />
-      <div className="flex w-full items-center justify-between gap-24">
-        <div className="flex flex-col gap-8 grow">
+      <div className="flex flex-col lg:flex-row w-full items-center justify-between gap-8 lg:gap-24">
+        <div className="flex flex-col gap-8 grow w-full">
           <Container title="Frameworks">
             <SkillsGrid>
               {skills.frameworks.map((framework) => (
@@ -56,7 +56,7 @@ export const Skills = () => {
             </SkillsGrid>
           </Container>
         </div>
-        <ProfileIllustration className="w-lg" />
+        <ProfileIllustration className="hidden lg:block w-lg shrink-0" />
       </div>
     </section>
   )
