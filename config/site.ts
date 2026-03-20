@@ -49,7 +49,7 @@ export const siteConfig = {
     {
       name: "GitHub",
       icon: IconBrandGithub,
-      url: "https://github.com/mibppaz",
+      url: "https://github.com/mibpaz",
     },
     {
       name: "LinkedIn",

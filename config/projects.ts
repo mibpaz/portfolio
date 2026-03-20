@@ -41,7 +41,7 @@ export const works: Work[] = [
     technologies: ["Svelte", "TailwindCSS", "JavaScript"],
     roles: ["Front-End Developer", "UI/UX Designer"],
     workPlace: "UFAL",
-    repo: "https://github.com/Ashlc/oxebanking",
+    repo: "https://github.com/mibpaz/oxebanking",
     when: "2024",
     status: "completed",
     cover: oxeBankingCover,
