@@ -49,7 +49,11 @@ export const Social = () => {
             ring ring-offset-2 ring-offset-transparent ring-transparent active:ring-primary-400"
           >
             <div className="flex flex-row items-center gap-2">
-              <social.icon size={24} strokeWidth={1.5} />
+              <social.icon
+                size={22}
+                strokeWidth={1.25}
+                color="var(--color-border)"
+              />
               <p>{social.name}</p>
             </div>
             <IconLink size={20} strokeWidth={1.5} className="text-primary" />
@@ -66,7 +70,11 @@ export const Social = () => {
             ring ring-offset-2 ring-offset-transparent ring-transparent active:ring-primary-300"
           >
             <div className="flex flex-row items-center gap-2">
-              <IconMail size={24} strokeWidth={1.5} />
+              <IconMail
+                size={24}
+                strokeWidth={1.25}
+                color="var(--color-border)"
+              />
               <p>Mail me!</p>
             </div>
             <AnimatePresence mode="wait">
