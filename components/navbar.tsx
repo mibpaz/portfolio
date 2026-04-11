@@ -10,7 +10,7 @@ export const Navbar = () => {
 
   return (
     <div className="w-full p-4 relative z-50">
-      <div className="w-full h-full flex items-center justify-between border border-primary bg-surface-900 rounded-xl py-3 px-6">
+      <div className="w-full h-full flex items-center justify-between border border-primary bg-default rounded-xl py-3 px-6">
         <motion.p className="text-2xl font-display" whileHover={{
           textShadow: "0 0 10px var(--color-primary)",
           transition: { duration: 0.5, ease: "easeInOut" },

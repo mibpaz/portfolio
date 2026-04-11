@@ -10,7 +10,7 @@ import {
   ModalHeader,
 } from "@heroui/modal";
 import { Slider } from "@heroui/slider";
-import { IconCheck, IconCopy, IconTrendingUp } from "@tabler/icons-react";
+import { IconCheck, IconCopy, IconFlame } from "@tabler/icons-react";
 import { useEffect, useState } from "react";
 
 const formalityTexts = [
@@ -48,8 +48,8 @@ const formalityTexts = [
     level: 6,
     label: "Shakespearean",
     emoji: "🎭",
-    text: `Hark! Most esteemed recipient, I do humbly beseech that this missive doth find thee in the very zenith of health and spirits most resplendent.\n
-Whilst traversing the vast and labyrinthine corridors of the modern aether, mine eyes did alight upon a most exquisite and cunningly wrought portfolio, whose elegance and ingenuity did forthwith compel me to bring it unto thy noble attention. Verily, I am persuaded—nay, convinced beyond reasonable doubt—that such masterful craftsmanship may align most harmoniously with the refined inclinations of thy distinguished taste.\n
+    text: `Most esteemed recipient, I do humbly beseech that this missive doth find thee in the very zenith of health and spirits most resplendent.\n
+Whilst traversing the vast and labyrinthine corridors of the modern aether, mine eyes did alight upon a most exquisite and cunningly wrought portfolio, whose elegance and ingenuity did forthwith compel me to bring it unto thy noble attention. Verily, I am persuaded to believe that such masterful craftsmanship may align most harmoniously with the refined inclinations of thy distinguished taste.\n
 Should it please thee, pray cast thine discerning gaze upon the following:\n
  ${siteConfig.url}`,
   },
@@ -99,9 +99,9 @@ export const FormalityModal = ({
       <ModalContent>
         {(onClose) => (
           <>
-            <ModalHeader className="flex flex-col gap-1">
-              <h3>Share this portfolio</h3>
-              <p className="text-sm text-border">
+            <ModalHeader className="flex flex-col gap-2">
+              <h3 className="ont-display">Share this portfolio</h3>
+              <p className="text-border">
                 Adjust the formality level and copy the text to share this
                 portfolio with others.
               </p>
@@ -119,16 +119,15 @@ export const FormalityModal = ({
                   hideValue
                   classNames={{
                     base: "max-w-full",
-                    track: "bg-default-200",
-                    filler: "bg-primary-500",
+                    track: "bg-surface-700",
+                    filler: "bg-primary",
                     thumb: "bg-primary-500",
-                    mark: "text-xs",
                   }}
                 />
                 <div className="flex flex-row items-center gap-2">
-                  <IconTrendingUp
+                  <IconFlame
                     size={16}
-                    strokeWidth={1.5}
+                    strokeWidth={2}
                     className="text-primary-500"
                   />
                   <p className="text-sm text-border">
@@ -139,8 +138,10 @@ export const FormalityModal = ({
                     </span>
                   </p>
                 </div>
-                <div className="rounded-lg border border-primary bg-surface-900 p-4 min-h-[120px]">
-                  <p className="text-sm leading-relaxed whitespace-pre-line">{currentText.text}</p>
+                <div className="rounded-lg border border-primary bg-default p-4 min-h-[120px] max-h-[240px] overflow-y-auto scroll-m-2">
+                  <p className="text-sm leading-relaxed whitespace-pre-line text-justify">
+                    {currentText.text}
+                  </p>
                 </div>
               </div>
             </ModalBody>
@@ -150,21 +151,13 @@ export const FormalityModal = ({
               </Button>
               <Button
                 color="primary"
-                className="text-background font-semibold"
+                className="text-background font-medium"
                 onPress={handleCopy}
                 startContent={
                   copied ? (
-                    <IconCheck
-                      size={16}
-                      strokeWidth={1.5}
-                      color="currentColor"
-                    />
+                    <IconCheck size={16} strokeWidth={2} color="currentColor" />
                   ) : (
-                    <IconCopy
-                      size={16}
-                      strokeWidth={1.5}
-                      color="currentColor"
-                    />
+                    <IconCopy size={16} strokeWidth={2} color="currentColor" />
                   )
                 }
               >

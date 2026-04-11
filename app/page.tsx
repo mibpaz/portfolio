@@ -24,14 +24,14 @@ export default function Home() {
         <div className="flex flex-col items-center justify-center gap-6 w-full">
           <h2>Like what you see?</h2>
           <Button
-            className="text-background font-bold"
+            className="text-background font-display font-semibold"
             endContent={<IconShare size={24} />}
             variant="solid"
             color="primary"
             size="lg"
             onPress={onOpen}
           >
-            Share this portfolio
+            SHARE THIS PORTFOLIO
           </Button>
         </div>
       </div>

@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 @tailwind utilities;
 
 @plugin '../hero.ts';
@@ -8,119 +9,138 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-    --color-default: #030F0F;
-    --color-border: #6F7D7D;
-    --color-foreground: #F2ECDE;
-    --color-background: #030f0f;
+  --color-default: #1a1112;
+  --color-border: #b8b1a5;
+  --color-foreground: #f2ecde;
+  --color-background: #0f0506;
+  --color-primary: #eb0038;
 
-    --color-primary-50: #edfff7;
-    --color-primary-100: #d6ffee;
-    --color-primary-200: #afffdd;
-    --color-primary-300: #71ffc4;
-    --color-primary-400: #2dfba3;
-    --color-primary-500: #02df82;
-    --color-primary-600: #00bf6b;
-    --color-primary-700: #009557;
-    --color-primary-800: #077447;
-    --color-primary-900: #085f3c;
-    --color-primary-950: #003620;
+  --color-primary-50: #fff0f0;
+  --color-primary-100: #f1939c;
+  --color-primary-200: #ea6572;
+  --color-primary-300: #e23647;
+  --color-primary-400: #c52233;
+  --color-primary-500: #a40c2c;
+  --color-primary-600: #8f0a26;
+  --color-primary-700: #7a0720;
+  --color-primary-800: #65051a;
+  --color-primary-900: #4f0213;
+  --color-primary-950: #3b020e;
 
-    --color-surface-50: #f1fcf9;
-    --color-surface-100: #d1f6ef;
-    --color-surface-200: #a3ece0;
-    --color-surface-300: #6ddbcd;
-    --color-surface-400: #3ec3b5;
-    --color-surface-500: #25a79c;
-    --color-surface-600: #1b867e;
-    --color-surface-700: #1a6b67;
-    --color-surface-800: #195653;
-    --color-surface-900: #042222;
-    --color-surface-950: #021A1A;
+  --color-surface-50: #bab8b8;
+  --color-surface-100: #a3a0a0;
+  --color-surface-200: #908c8d;
+  --color-surface-300: #858082;
+  --color-surface-400: #6c6567;
+  --color-surface-500: #3b3235;
+  --color-surface-600: #362d30;
+  --color-surface-700: #30272a;
+  --color-surface-800: #251c1e;
+  --color-surface-900: #1a1112;
+  --color-surface-950: #0f0506;
 
-    --color-primary: #02DF82;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-sans: "Atkinson Hyperlegible Next", sans-serif;
+  --font-mono: "Space Mono", monospace;
 
-    --font-display: Unica One, sans-serif;
-    --font-sans: Fira Code, sans-serif;
-    --font-mono: Fira Code, monospace;
-
-    --shadow-base: 0px 4px 16px 0px var(--color-primary-900);
+  --shadow-base: 0px 4px 16px 0px var(--color-primary-900);
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 14px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--color-default);
+  border-radius: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--color-border) var(--color-default);
+  }
 }
 
 :root {
-    font-family: var(--font-sans);
-    font-size: 16px;
-    line-height: 1.5;
-    font-weight: 400;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--color-foreground);
+  background-color: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
     color: var(--color-foreground);
-    background-color: var(--color-background);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
     text-rendering: optimizeLegibility;
-}
+  }
 
-@layer base {
+  h1 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    margin: 0;
+    padding: 0;
+  }
 
-    h1,
-    h2,
-    h3 {
-        font-family: var(--font-display);
-        color: var(--color-foreground);
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-text-size-adjust: 100%;
-        text-rendering: optimizeLegibility;
-    }
+  h2 {
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    line-height: 1.2;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    margin: 0;
+    padding: 0;
+  }
 
-    h1 {
-        font-size: clamp(1.75rem, 4vw, 2.5rem);
-        line-height: 1.2;
-        font-weight: 700;
-        letter-spacing: -0.025em;
-        margin: 0;
-        padding: 0;
-    }
+  h3 {
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+    line-height: 1.15;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    margin: 0;
+    padding: 0;
+  }
 
-    h2 {
-        font-size: clamp(1.5rem, 3.5vw, 2rem);
-        line-height: 1.2;
-        font-weight: 600;
-        letter-spacing: -0.025em;
-        margin: 0;
-        padding: 0;
-    }
+  p {
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.5;
+    letter-spacing: 0;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
 
-    h3 {
-        font-size: clamp(1.25rem, 3vw, 1.5rem);
-        line-height: 1.2;
-        font-weight: 500;
-        letter-spacing: -0.025em;
-        margin: 0;
-        padding: 0;
-    }
-
-    p {
-        font-size: 1rem;
-        line-height: 1.5;
-        letter-spacing: 0;
-        margin-bottom: 1rem;
-        margin-top: 0;
-        padding-top: 0;
-        padding-bottom: 0;
-        margin-bottom: 0;
-        padding-bottom: 0;
-    }
-
-    * {
-        border-color: var(--color-border);
-        -webkit-font-smoothing: antialiased;
-    }
+  * {
+    border-color: var(--color-border);
+    -webkit-font-smoothing: antialiased;
+  }
 }
 
 .bg-content1 {
-    background-color: var(--color-surface-950);
+  background-color: var(--color-surface-950);
 }

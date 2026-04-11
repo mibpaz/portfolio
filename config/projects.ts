@@ -1,7 +1,11 @@
-import andarilhoImages, { cover as andarilhoCover } from "@/assets/images/Andarilho";
+import andarilhoImages, {
+  cover as andarilhoCover,
+} from "@/assets/images/Andarilho";
 import bumyImages, { cover as bumyCover } from "@/assets/images/Bumy";
 import mpImages, { cover as mpCover } from "@/assets/images/MP";
-import oxeBankingImages, { cover as oxeBankingCover } from "@/assets/images/Oxebanking";
+import oxeBankingImages, {
+  cover as oxeBankingCover,
+} from "@/assets/images/Oxebanking";
 import { Work } from "@/types";
 import { descriptions } from "./descriptions";
 
@@ -11,7 +15,14 @@ export const works: Work[] = [
     title: "Bumy",
     subtitle: "Social marketing agent.",
     description: descriptions.bumy,
-    technologies: ["React", "TailwindCSS", "TypeScript", "Tanstack Query", "Axios", "React Hook Form"],
+    technologies: [
+      "React",
+      "TailwindCSS",
+      "TypeScript",
+      "Tanstack Query",
+      "Axios",
+      "React Hook Form",
+    ],
     roles: ["UI/UX Designer, Front-End Developer"],
     workPlace: "Freelance",
     when: "2025",
@@ -31,7 +42,7 @@ export const works: Work[] = [
     status: "completed",
     cover: mpCover,
     images: mpImages,
-    link: "https://ichello-registro-front.onrender.com/",
+    link: "https://musicaprotegida.com.br/",
   },
   {
     id: "3",
