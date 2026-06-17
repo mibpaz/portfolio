@@ -61,7 +61,7 @@ export const Navbar = () => {
           isVisible ? "translate-y-0" : "-translate-y-full",
         )}
       >
-        <div className="w-full h-full flex items-center justify-between border border-primary/30 bg-default/25 backdrop-blur-sm backdrop-brightness-150 rounded-full py-3 px-6">
+        <div className="w-full h-full flex items-center justify-between border border-primary/30 bg-default/25 backdrop-blur-sm rounded-full py-3 px-6">
           <motion.p
             className="text-lg font-display leading-none mb-0.5"
             whileHover={{
@@ -85,17 +85,29 @@ export const Navbar = () => {
                   scale: 1.25,
                   marginLeft: 20,
                   marginRight: 20,
-                  transition: { type: "tween", duration: 0.2, ease: "easeInOut" },
+                  transition: {
+                    type: "tween",
+                    duration: 0.2,
+                    ease: "easeInOut",
+                  },
                 }}
                 whileTap={{
                   scale: 0.95,
                   marginLeft: 0,
                   marginRight: 0,
-                  transition: { type: "tween", duration: 0.2, ease: "easeInOut" },
+                  transition: {
+                    type: "tween",
+                    duration: 0.2,
+                    ease: "easeInOut",
+                  },
                 }}
                 className="container"
               >
-                <Link color="foreground" size="sm" href={`#${item.anchor || ""}`}>
+                <Link
+                  color="foreground"
+                  size="sm"
+                  href={`#${item.anchor || ""}`}
+                >
                   {item.label}
                 </Link>
               </motion.div>

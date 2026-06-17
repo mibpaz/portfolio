@@ -91,16 +91,16 @@ export const FormalityModal = ({
       onOpenChange={onOpenChange}
       size="lg"
       classNames={{
-        base: "bg-surface-950 border border-primary",
-        header: "border-b border-primary",
-        footer: "border-t border-primary",
+        base: "border border-primary/30 bg-default/50 backdrop-blur-md backdrop-brightness-150",
+        header: "border-b border-primary/30",
+        footer: "border-t border-primary/30",
       }}
     >
       <ModalContent>
         {(onClose) => (
           <>
             <ModalHeader className="flex flex-col gap-2">
-              <h3 className="ont-display">Share this portfolio</h3>
+              <h3 className="font-display">Share this portfolio</h3>
               <p className="text-border">
                 Adjust the formality level and copy the text to share this
                 portfolio with others.
