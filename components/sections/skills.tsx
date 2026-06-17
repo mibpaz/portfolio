@@ -62,10 +62,6 @@ export const Skills = () => {
                 ))}
               </SkillsGrid>
             </Container>
-            <p className="font-mono text-sm text-primary mt-2 ml-2 bg-primary-900/30 w-max px-2 py-1 leading-3.5">
-              Although, we know language is just a tool ;) I'm fine learning
-              any!
-            </p>
           </div>
           <Container title="Other stuff in my bag">
             <SkillsGrid>

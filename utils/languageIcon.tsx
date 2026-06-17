@@ -1,5 +1,27 @@
 import { IconSvgProps } from "@/types";
-import { IconBeach, IconBox, IconBrandAngular, IconBrandFramerMotion, IconBrandJavascript, IconBrandLaravel, IconBrandNextjs, IconBrandPhp, IconBrandPython, IconBrandReact, IconBrandSvelte, IconBrandTailwind, IconBrandTypescript, IconBrandVue, IconChevronUp, IconClipboardData, IconLayoutDashboard, IconMapPin, IconTransfer, IconZeppelin } from "@tabler/icons-react";
+import {
+  IconBeach,
+  IconBox,
+  IconBrandAngular,
+  IconBrandFramerMotion,
+  IconBrandJavascript,
+  IconBrandLaravel,
+  IconBrandNextjs,
+  IconBrandPhp,
+  IconBrandPython,
+  IconBrandReact,
+  IconBrandSupabase,
+  IconBrandSvelte,
+  IconBrandTailwind,
+  IconBrandTypescript,
+  IconBrandVue,
+  IconChevronUp,
+  IconClipboardData,
+  IconLayoutDashboard,
+  IconMapPin,
+  IconTransfer,
+  IconZeppelin,
+} from "@tabler/icons-react";
 
 export default function brandIcon(language: string, props?: IconSvgProps) {
   switch (language) {
@@ -43,5 +65,7 @@ export default function brandIcon(language: string, props?: IconSvgProps) {
       return <IconLayoutDashboard {...props} />;
     case "MUI":
       return <IconBox {...props} />;
+    case "Supabase":
+      return <IconBrandSupabase {...props} />;
   }
 }

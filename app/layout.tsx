@@ -94,18 +94,16 @@ export default function RootLayout({
       <head />
       <body
         className={clsx(
-          "min-h-screen text-foreground bg-background font-sans antialiased dark",
+          "text-foreground bg-gradient-to-l from-background via-primary-900/30 to-background font-sans antialiased dark",
           display.variable,
           body.variable,
           mono.variable,
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <div className="relative flex flex-col h-screen">
+          <div className="relative w-screen overflow-overlay">
             <Navbar />
-            <main className="container mx-auto max-w-7xl flex-grow px-4 sm:px-6">
-              {children}
-            </main>
+            <main className="container">{children}</main>
           </div>
         </Providers>
       </body>

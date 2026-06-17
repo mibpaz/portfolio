@@ -14,9 +14,9 @@ export default function Home() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   return (
-    <div className="flex flex-col items-center justify-center gap-8 md:py-10 w-full pb-24">
+    <div className="flex flex-col items-center justify-center gap-8 md:py-10 w-screen pb-24">
       <HeroSection />
-      <div className="flex flex-col items-center justify-center gap-16 md:gap-32 w-full">
+      <div className="mt-10 flex flex-col items-center justify-center gap-16 md:gap-32 w-full md:w-auto lg:max-w-7xl px-5 md:px-0 mx-auto">
         <Skills />
         <Projects />
         <About />
@@ -24,7 +24,7 @@ export default function Home() {
         <div className="flex flex-col items-center justify-center gap-6 w-full">
           <h2>Like what you see?</h2>
           <Button
-            className="text-background font-display font-semibold"
+            className="text-background font-bold tracking-wider"
             endContent={<IconShare size={24} />}
             variant="solid"
             color="primary"

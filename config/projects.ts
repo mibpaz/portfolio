@@ -1,34 +1,27 @@
-import andarilhoImages, {
-  cover as andarilhoCover,
-} from "@/assets/images/Andarilho";
-import bumyImages, { cover as bumyCover } from "@/assets/images/Bumy";
+import bodegaFran6Images, {
+  cover as bodegaFran6Cover,
+} from "@/assets/images/BodegaFran6";
 import mpImages, { cover as mpCover } from "@/assets/images/MP";
-import oxeBankingImages, {
-  cover as oxeBankingCover,
-} from "@/assets/images/Oxebanking";
+import unibicosImages, {
+  cover as unibicosCover,
+} from "@/assets/images/Unibicos";
 import { Work } from "@/types";
 import { descriptions } from "./descriptions";
 
 export const works: Work[] = [
   {
     id: "1",
-    title: "Bumy",
-    subtitle: "Social marketing agent.",
-    description: descriptions.bumy,
-    technologies: [
-      "React",
-      "TailwindCSS",
-      "TypeScript",
-      "Tanstack Query",
-      "Axios",
-      "React Hook Form",
-    ],
-    roles: ["UI/UX Designer, Front-End Developer"],
+    title: "Bodega Fran6",
+    subtitle: "Local business website.",
+    description: descriptions.bodegaFran6,
+    technologies: ["Next.js", "TailwindCSS", "Supabase", "React Hook Form"],
+    roles: ["Full Stack Developer"],
     workPlace: "Freelance",
-    when: "2025",
+    when: "2026",
     status: "completed",
-    cover: bumyCover,
-    images: bumyImages,
+    cover: bodegaFran6Cover,
+    images: bodegaFran6Images,
+    link: "https://bodegafran6.com.br/",
   },
   {
     id: "2",
@@ -46,30 +39,16 @@ export const works: Work[] = [
   },
   {
     id: "3",
-    title: "Oxebanking",
-    subtitle: "Fictional digital bank.",
-    description: descriptions.oxeBanking,
-    technologies: ["Svelte", "TailwindCSS", "JavaScript"],
-    roles: ["Front-End Developer", "UI/UX Designer"],
-    workPlace: "UFAL",
-    repo: "https://github.com/mibpaz/oxebanking",
-    when: "2024",
-    status: "completed",
-    cover: oxeBankingCover,
-    images: oxeBankingImages,
-  },
-  {
-    id: "9",
-    title: "Andarilho",
-    subtitle: "Accessibility reports",
-    description: descriptions.andarilho,
-    technologies: ["React", "TailwindCSS", "TypeScript", "Mapbox"],
-    roles: ["Front-End Developer, UI/UX Designer"],
+    title: "Unibicos",
+    subtitle: "Digital pinboard website for my university.",
+    description: descriptions.unibicos,
+    technologies: ["Next.js", "TailwindCSS", "Supabase"],
+    roles: ["Full Stack Developer"],
     workPlace: "Freelance",
-    when: "2025",
+    when: "2026",
     status: "completed",
-    cover: andarilhoCover,
-    images: andarilhoImages,
-    link: "https://andarilho.vercel.app/",
+    cover: unibicosCover,
+    images: unibicosImages,
+    link: "https://unibicos.vercel.app/",
   },
 ];
